@@ -20,7 +20,10 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          context: .
+          context: ./
           file: ./Dockerfile
           push: true
-          tags: yourusername/e1v2
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/e1v2
+
+      - name: Image digest
+        run: echo ${{ steps.docker_build.outputs.digest }}
