@@ -32,6 +32,6 @@ app.use('/mytest', testRoutes);
 
 
 app.listen(port, () => {
-    console.log(`Example app listening
+    console.log(`SECRET KEY AND ACTIONS ADDED Example app listening
     at http://localhost:${port}`)
     })
