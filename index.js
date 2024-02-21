@@ -2,6 +2,9 @@
 
 
 const testRoutes = require('./routes/myTestRoutes');
+const apiRoutes = require('./routes/apiRoute');
+
+
 
 
 const express = require('express')
@@ -28,6 +31,7 @@ app.use('/', express.static('public'))
 
 
 app.use('/mytest', testRoutes);
+app.use('/api', apiRoutes);
 
 
 
