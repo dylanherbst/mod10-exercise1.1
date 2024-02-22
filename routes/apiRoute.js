@@ -28,7 +28,7 @@ const apiProducts = async () => {
 };
 
 // Read (Get all products)
-router.get('/products', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         // Check if products array is empty and populate it if needed
         if (products.length === 0) {
